@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Frontend Mentor | [Blogr]</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav-bar" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" role="link" aria-label="Blogr Top Page" class="nav-bar__logo-container"><img src="images/logo.svg" alt="Blogr" class="nav-bar__logo"/></a>
+        <div
+          class="btn-container"
+          aria-label="Open Mobile Menu"
+        >
+          <input type="checkbox" id="checkbox" class="nav__checkbox">
+          <label for="checkbox"  class="nav-bar__hamburger-button"><span></span></label>
+        </div>
+        <div class="nav-bar__menu modal-mobile">
+          <div class="nav-bar__menu--former">
+            <ul class="nav-bar__menu--former-container">
+              <li
+                class="nav-bar__menu--former-product menu--link"
+                aria-label="Navigation Dropdown Product"
+              >
+                Product <picture class="nav-bar__arrow">
+                  <source media="(min-width: 56.3em)" srcset="images/icon-arrow-light.svg">
+                  <source media="(max-width: 56.2em)" srcset="images/icon-arrow-dark.svg">
+                <img
+                  src="images/icon-arrow-dark.svg"
+                  alt=""
+                  class="nav-bar__arrow--img"
+                  aria-label="Open Dropdown Product"
+                />
+              </picture>
+
+              <div class="nav-bar__menu--former-product-dropdown dropdown">
+                <ul>
+                  <li class="nav-bar__menu-former-product-dropdown-overview">
+                    <a href="#" role="link" aria-label="Navigation Overview"
+                      >Overview</a
+                    >
+                  </li>
+                  <li class="nav-bar__menu-former-product-dropdown-pricing">
+                    <a href="#" role="link" aria-label="Navigation Pricing"
+                      >Pricing</a
+                    >
+                  </li>
+                  <li class="nav-bar__menu-former-product-dropdown-marketplace">
+                    <a href="#" role="link" aria-label="Navigation Marketplace"
+                      >Marketplace</a
+                    >
+                  </li>
+                  <li class="nav-bar__menu-former-product-dropdown-features">
+                    <a href="#" role="link" aria-label="Navigation Features"
+                      >Features</a
+                    >
+                  </li>
+                  <li
+                    class="nav-bar__menu-former-product-dropdown-integrations"
+                  >
+                    <a href="#" role="link" aria-label="Navigation Integrations"
+                      >Integrations</a
+                    >
+                  </li>       
+                </div>
+
+              
+
+              <li
+                class="nav-bar__menu--former-company menu--link"
+                aria-label="Navigation Dropdown Company"
+              >
+                Company
+                <picture class="nav-bar__arrow">
+                  <source media="(min-width: 56.3em)" srcset="images/icon-arrow-light.svg">
+                  <source media="(max-width: 56.2em)" srcset="images/icon-arrow-dark.svg">
+                <img
+                  src="images/icon-arrow-dark.svg"
+                  alt=""
+                  class="nav-bar__arrow--img"
+                  aria-label="Open Dropdown Company"
+                />
+                </picture>
+                <div class="nav-bar__menu--former-company-dropdown dropdown">
+                  <ul>
+                    <li class="nav-bar__menu-former-company-dropdown-about">
+                      <a
+                        href="#"
+                        role="link"
+                        aria-label="Navigation About Company"
+                        >About</a
+                      >
+                    </li>
+                    <li class="nav-bar__menu-former-company-dropdown-Team">
+                      <a href="#" role="link" aria-label="Navigation Team"
+                        >Team</a
+                      >
+                    </li>
+                    <li class="nav-bar__menu-former-company-dropdown-blog">
+                      <a href="#" role="link" aria-label="Navigation Blog"
+                        >Blog</a
+                      >
+                    </li>
+                    <li class="nav-bar__menu-former-company-dropdown-careers">
+                      <a href="#" role="link" aria-label="Navigation Careers"
+                        >Careers</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            
+
+              <li
+                class="nav-bar__menu--former-connect menu--link"
+                aria-label="Navigation Dropdown Connect"
+              >
+                Connect
+                <picture class="nav-bar__arrow">
+                  <source media="(min-width: 56.3em)" srcset="images/icon-arrow-light.svg">
+                  <source media="(max-width: 56.2em)" srcset="images/icon-arrow-dark.svg">
+                <img
+                  src="images/icon-arrow-dark.svg"
+                  alt=""
+                  class="nav-bar__arrow--img"
+                  aria-label="Open Dropdown Connect"
+                />
+                </picture>
+
+                <div class="nav-bar__menu--former-connect-dropdown dropdown">
+                  <ul>
+                    <li class="nav-bar__menu-former-connect-dropdown-contact">
+                      <a
+                        href="#"
+                        role="link"
+                        aria-label="Navigation Contact Information"
+                        >Contact</a
+                      >
+                    </li>
+                    <li class="nav-bar__menu-former-connect-dropdown-newsletter">
+                      <a href="#" role="link" aria-label="Navigation Newsletter"
+                        >Newsletter</a
+                      >
+                    </li>
+                    <li class="nav-bar__menu-former-connect-dropdown-linkedin">
+                      <a href="#" role="link" aria-label="Navigation LinkedIn"
+                        >LinkedIn</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-bar__menu-latter">
+            <a href="#" role="button" aria-lebel="Login" class="menu--link">Login</a>
+            <a href="#" role="button" aria-label="Sign Up" class="btn btn-signup">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+      <div class="header__wrapper wrapper">
+        <h1 class="header__title">A modern publishing platform</h1>
+        <p class="header__description">
+          Grow your audience and build your online brand
+        </p>
+
+        <a href="#" class="btn btn-start" arial-label="Start for Free Link">Start for Free</button>
+        <a href="#" class="btn btn-learn-more" aria-label="Learn More link">
+          Learn More</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <h1 class="section-title">Designed for the future</h1>
+        <img
+        src="images/illustration-editor-mobile.svg"
+        alt=""
+        class="main__img-editor"
+      />
+    
+      <article class="main__item main__item-1">
+        <h2 class="section-subtitle">Introducing an extensible editor</h2>
+        <p class="main__description">
+          Blogr features an exceedingly intuitive interface which lets you focus
+          on one thing: creating content. The editor supports management of
+          multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide
+          easy ways to add functionality or change the looks of a blog.
+        </p>
+      </article>
+
+      <article class="main__item main__item-2">
+        <h2 class="section-subtitle">Robust content management</h2>
+        <p class="main__description">
+          Flexible content management enables users to easily move through
+          posts. Increase the usability of your blog by adding customized
+          categories, sections, format, or flow. With this functionality, you’re
+          in full control.
+        </p>
+      </article>
+
+      <article class="main__special">
+        
+        <img
+          src="images/illustration-phones.svg"
+          alt=""
+          class="main__special-img"
+        />
+        <h1 class="main__special-title">State of the Art Infrastructure</h1>
+        <p class="main__special-description">
+          With reliability and speed in mind, worldwide data centers provide the
+          backbone for ultra-fast connectivity. This ensures your site will load
+          instantly, no matter where your readers are, keeping your site
+          competitive.
+        </p>
+      </article>
+      <picture class="main__img-laptop">
+        <source media="(min-width: 56.3em)" srcset="images/illustration-laptop-desktop.svg">
+                  <source media="(max-width: 56.2em)" srcset="images/illustration-laptop-mobile.svg">
+      <img
+        src="images/illustration-laptop-mobile.svg"
+        alt=""
+        class="main__design--img-laptop"
+      />
+      </picture>
+
+      <article class="main__item main__item-4">
+        <h2 class="section-subtitle">Free, open, simple</h2>
+        <p class="main__description">
+          Blogr is a free and open source application backed by a large
+          community of helpful developers. It supports features such as code
+          syntax highlighting, RSS feeds, social media integration, third-party
+          commenting tools, and works seamlessly with Google Analytics. The
+          architecture is clean and is relatively easy to learn.
+        </p>
+      </article>
+
+      <article class="main__item main__item-5">
+        <h2 class="section-subtitle">Powerful tooling</h2>
+        <p class="main__description">
+          Batteries included. We built a simple and straightforward CLI tool
+          that makes customization and deployment a breeze, but capable of
+          producing even the most complicated sites.
+        </p>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <img
+        src="images/logo.svg"
+        alt="Blogr"
+        class="footer__logo"
+        aria-label="Blogr Logo"
+      />
+      <div class="footer__item">
+        <h2 class="footer__item--title">Product</h1>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <h2 class="footer__item--title">Company</h1>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Carrers</a></li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <h2 class="footer__item--title">Connect</h1>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
