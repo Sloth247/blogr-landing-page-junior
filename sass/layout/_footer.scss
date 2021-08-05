@@ -1,0 +1,61 @@
+.footer {
+  padding: 20% 5%;
+  background-color: $color-blue-dark;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  color: $color-grey;
+  display: grid;
+  grid-row-gap: 3rem;
+  row-gap: 3rem;
+  font-family: $font-secondary;
+  font-weight: 400;
+  border-top-right-radius: 5rem;
+
+  @include mq(tablet) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    align-items: start;
+    padding: 10% 5%;
+    text-align: left;
+  }
+
+  @include mq(desktop) {
+    padding: 7% 5%;
+  }
+
+  &__logo {
+    width: 5rem;
+    @include mq(desktop) {
+      width: 8rem;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-row-gap: 2rem;
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    & li:hover,
+    & li:focus {
+      text-decoration: underline;
+    }
+    & a:focus:focus-visible {
+      outline: 1px dotted $color-white;
+      outline-offset: 3px;
+    }
+  }
+  &__item--title {
+    font-size: 1rem;
+    color: $color-white;
+    font-weight: 500;
+    @include mq(tablet) {
+      text-align: left;
+    }
+  }
+}
