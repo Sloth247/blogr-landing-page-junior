@@ -1,0 +1,132 @@
+.btn {
+  border-color: transparent;
+  background-color: transparent;
+
+  &-signup {
+    background-image: linear-gradient(
+      to right,
+      $color-red-very-light,
+      $color-red-light
+    );
+    border-radius: 3.5rem;
+    padding: 0.7rem;
+    color: $color-white;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+
+    @include mq(desktop) {
+      background-image: none;
+      background-color: $color-white;
+      color: $color-primary-red-very-light;
+      font-weight: 700;
+      padding: 0.7rem 2rem;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary-red-very-light;
+      color: $color-white;
+      transform: translateY(-0.1rem);
+      opacity: 0.7;
+    }
+    &:focus:focus-visible {
+      outline: none;
+    }
+  }
+
+  &-start,
+  &-learn-more {
+    border: 1px solid $color-white;
+    padding: 0.7rem;
+    width: 100%;
+    border-radius: 3.5rem;
+    font-weight: 700;
+    font-family: $font-secondary;
+    cursor: pointer;
+    margin-top: 2rem;
+
+    @include mq(desktop) {
+      width: 9rem;
+    }
+    &:focus:focus-visible {
+      outline: none;
+    }
+  }
+
+  &-start {
+    background-color: $color-white;
+    color: $color-primary-red-very-light;
+
+    &:hover,
+    &:focus {
+      background-color: $color-primary-red-very-light;
+      color: $color-white;
+      border: none;
+    }
+    @include mq(desktop) {
+      justify-self: end;
+    }
+  }
+
+  &-learn-more {
+    color: $color-white;
+    &:hover,
+    &:focus {
+      color: $color-primary-red-light;
+      background-color: $color-white;
+    }
+  }
+}
+
+.nav-bar__hamburger-button {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  @include mq(desktop) {
+    display: none;
+  }
+
+  &:focus:focus-visible,
+  &:hover {
+    outline: 1px dashed $color-white;
+    outline-offset: 0.6rem;
+  }
+  & span {
+    width: 1.8rem;
+    height: 2px;
+    background-color: $color-white;
+    position: relative;
+    display: inline-block;
+  }
+  & span::before,
+  & span::after {
+    position: absolute;
+    content: "";
+    width: 1.8rem;
+    height: 2px;
+    background-color: $color-white;
+    left: 0;
+  }
+  & span::before {
+    top: -8px;
+  }
+
+  & span::after {
+    top: 8px;
+  }
+}
+.nav__checkbox {
+  display: none;
+}
+.nav__checkbox:checked + .nav-bar__hamburger-button span::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.nav__checkbox:checked + .nav-bar__hamburger-button span::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+.nav__checkbox:checked + .nav-bar__hamburger-button span {
+  background-color: transparent;
+}
