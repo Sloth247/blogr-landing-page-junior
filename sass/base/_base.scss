@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: $font-primary;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+img,
+picture {
+  width: 100%;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
