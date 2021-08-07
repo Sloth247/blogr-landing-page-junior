@@ -45,8 +45,8 @@
     & li:focus {
       text-decoration: underline;
     }
-    & a:focus:focus-visible {
-      outline: 1px dotted $color-white;
+    & a:focus-visible {
+      outline: 3px dotted $color-white;
       outline-offset: 3px;
     }
   }
