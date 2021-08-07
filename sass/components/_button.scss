@@ -30,7 +30,7 @@
       transform: translateY(-0.1rem);
       opacity: 0.7;
     }
-    &:focus:focus-visible {
+    &:focus-visible {
       outline: none;
     }
   }
@@ -49,7 +49,7 @@
     @include mq(desktop) {
       width: 9rem;
     }
-    &:focus:focus-visible {
+    &:focus-visible {
       outline: none;
     }
   }
@@ -79,6 +79,30 @@
   }
 }
 
+.menu-btn {
+  font-family: inherit;
+  background-color: inherit;
+  border: inherit;
+  color: inherit;
+  font-size: inherit;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-0.1rem);
+    opacity: 0.8;
+    @include mq(desktop) {
+      text-decoration: underline;
+      font-weight: 500;
+      opacity: 1;
+    }
+  }
+  &:focus-visible {
+    outline: 3px dotted $color-white;
+    outline-offset: 0.5rem;
+  }
+}
+
 .nav-bar__hamburger-button {
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -87,9 +111,9 @@
     display: none;
   }
 
-  &:focus:focus-visible,
+  &:focus,
   &:hover {
-    outline: 1px dashed $color-white;
+    outline: 3px dashed $color-white;
     outline-offset: 0.6rem;
   }
   & span {
@@ -107,6 +131,7 @@
     height: 2px;
     background-color: $color-white;
     left: 0;
+    transition: transform 0.2s ease;
   }
   & span::before {
     top: -8px;
@@ -115,8 +140,23 @@
   & span::after {
     top: 8px;
   }
+
+  &.is-active {
+    & span::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    & span::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+    & span {
+      background-color: transparent;
+    }
+  }
 }
-.nav__checkbox {
+
+/*.nav__checkbox {
   display: none;
 }
 .nav__checkbox:checked + .nav-bar__hamburger-button span::before {
@@ -129,4 +169,5 @@
 }
 .nav__checkbox:checked + .nav-bar__hamburger-button span {
   background-color: transparent;
-}
+} 
+*/
