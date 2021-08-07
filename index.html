@@ -32,100 +32,107 @@
     <header class="header">
       <nav class="nav-bar" aria-label="Main Navigation">
         <a href="index.html" aria-label="Blogr Top Page" class="nav-bar__logo-container"><img src="images/logo.svg" alt="Blogr" class="nav-bar__logo"/></a>
-        <div
+        <button class="btn nav-bar__hamburger-button" type="button" aria-label="Toggle Mobile Menu" aria-expanded="false" aria-controls="mobile-modal">
+          <span></span>
+        </button>
+        <!--<div
           class="btn-container"
           aria-label="Open Mobile Menu"
         >
           <input type="checkbox" id="checkbox" class="nav__checkbox">
           <label for="checkbox"  class="nav-bar__hamburger-button"><span></span></label>
-        </div>
-        <div class="nav-bar__menu modal-mobile">
+        </div> -->
+        <div class="nav-bar__menu modal-mobile" id="mobile-modal" aria-hidden="true">
           <div class="nav-bar__menu--former">
             <ul class="nav-bar__menu--former-container">
               <li
                 class="nav-bar__menu--former-product menu--link"
-                aria-label="Navigation Dropdown Product"
               >
-                Product <picture class="nav-bar__arrow">
+                <button class="nav-bar__menu--former-product-btn menu-btn" aria-controls="product-dropdown" aria-expanded="false" aria-label="View Product Items">
+                Product <!--<picture class="nav-bar__arrow">
                   <source media="(min-width: 56.3em)" srcset="images/icon-arrow-light.svg">
-                  <source media="(max-width: 56.2em)" srcset="images/icon-arrow-dark.svg">
+                  <source media="(max-width: 56.2em)" srcset="images/icon-arrow-dark.svg"> -->
                 <img
                   src="images/icon-arrow-dark.svg"
                   alt=""
-                  class="nav-bar__arrow--img"
-                  aria-label="Open Dropdown Product"
+                  class="nav-bar__arrow"
+                  aria-hidden="true"
                 />
-              </picture>
+              <!--</picture>-->
+              </button>
 
-              <div class="nav-bar__menu--former-product-dropdown dropdown">
+              <div class="nav-bar__menu--former-product-dropdown dropdown" id="product-dropdown" aria-hidden="true">
                 <ul>
                   <li class="nav-bar__menu-former-product-dropdown-overview">
-                    <a href="#" aria-label="Navigation Overview"
+                    <a href="#"
                       >Overview</a
                     >
                   </li>
                   <li class="nav-bar__menu-former-product-dropdown-pricing">
-                    <a href="#" aria-label="Navigation Pricing"
+                    <a href="#"
                       >Pricing</a
                     >
                   </li>
                   <li class="nav-bar__menu-former-product-dropdown-marketplace">
-                    <a href="#" aria-label="Navigation Marketplace"
+                    <a href="#"
                       >Marketplace</a
                     >
                   </li>
                   <li class="nav-bar__menu-former-product-dropdown-features">
-                    <a href="#" aria-label="Navigation Features"
+                    <a href="#"
                       >Features</a
                     >
                   </li>
                   <li
                     class="nav-bar__menu-former-product-dropdown-integrations"
                   >
-                    <a href="#" aria-label="Navigation Integrations"
+                    <a href="#"
                       >Integrations</a
                     >
-                  </li>       
+                  </li>
+                  </ul>       
                 </div>
 
               
 
               <li
                 class="nav-bar__menu--former-company menu--link"
-                aria-label="Navigation Dropdown Company"
               >
+              <button class="nav-bar__menu--former-company-btn menu-btn" aria-controls="company-dropdown" aria-expanded="false" aria-label="View Company Details">
                 Company
-                <picture class="nav-bar__arrow">
+                <!-- <picture class="nav-bar__arrow">
                   <source media="(min-width: 56.3em)" srcset="images/icon-arrow-light.svg">
-                  <source media="(max-width: 56.2em)" srcset="images/icon-arrow-dark.svg">
+                  <source media="(max-width: 56.2em)" srcset="images/icon-arrow-dark.svg">-->
                 <img
                   src="images/icon-arrow-dark.svg"
                   alt=""
-                  class="nav-bar__arrow--img"
-                  aria-label="Open Dropdown Company"
+                  class="nav-bar__arrow"
+                  aria-hidden="true"
                 />
-                </picture>
-                <div class="nav-bar__menu--former-company-dropdown dropdown">
+              </button>
+                <!-- </picture> -->
+
+                <div class="nav-bar__menu--former-company-dropdown dropdown" id="company-dropdown" aria-hidden="true">
                   <ul>
                     <li class="nav-bar__menu-former-company-dropdown-about">
                       <a
                         href="#"
-                        aria-label="Navigation About Company"
+                       
                         >About</a
                       >
                     </li>
                     <li class="nav-bar__menu-former-company-dropdown-Team">
-                      <a href="#" aria-label="Navigation Team"
+                      <a href="#" 
                         >Team</a
                       >
                     </li>
                     <li class="nav-bar__menu-former-company-dropdown-blog">
-                      <a href="#" aria-label="Navigation Blog"
+                      <a href="#" 
                         >Blog</a
                       >
                     </li>
                     <li class="nav-bar__menu-former-company-dropdown-careers">
-                      <a href="#" aria-label="Navigation Careers"
+                      <a href="#"
                         >Careers</a
                       >
                     </li>
@@ -136,36 +143,35 @@
 
               <li
                 class="nav-bar__menu--former-connect menu--link"
-                aria-label="Navigation Dropdown Connect"
-              >
+              ><button class="nav-bar__menu--former-company-btn menu-btn" aria-controls="connect-dropdown" aria-expanded="false" aria-label="View Contact Details">
                 Connect
-                <picture class="nav-bar__arrow">
+                <!-- <picture class="nav-bar__arrow">
                   <source media="(min-width: 56.3em)" srcset="images/icon-arrow-light.svg">
-                  <source media="(max-width: 56.2em)" srcset="images/icon-arrow-dark.svg">
+                  <source media="(max-width: 56.2em)" srcset="images/icon-arrow-dark.svg">-->
                 <img
                   src="images/icon-arrow-dark.svg"
                   alt=""
-                  class="nav-bar__arrow--img"
-                  aria-label="Open Dropdown Connect"
+                  class="nav-bar__arrow"
+                  aria-hidden="true"
                 />
-                </picture>
+                <!--</picture>-->
+              </button>
 
-                <div class="nav-bar__menu--former-connect-dropdown dropdown">
+                <div class="nav-bar__menu--former-connect-dropdown dropdown" id="connect-dropdown" aria-hidden="true">
                   <ul>
                     <li class="nav-bar__menu-former-connect-dropdown-contact">
                       <a
                         href="#"
-                        aria-label="Navigation Contact Information"
                         >Contact</a
                       >
                     </li>
                     <li class="nav-bar__menu-former-connect-dropdown-newsletter">
-                      <a href="#" aria-label="Navigation Newsletter"
+                      <a href="#"
                         >Newsletter</a
                       >
                     </li>
                     <li class="nav-bar__menu-former-connect-dropdown-linkedin">
-                      <a href="#" aria-label="Navigation LinkedIn"
+                      <a href="#" 
                         >LinkedIn</a
                       >
                     </li>
@@ -175,19 +181,20 @@
             </ul>
           </div>
           <div class="nav-bar__menu-latter">
-            <a href="#" role="button" aria-label="Login" class="menu--link">Login</a>
-            <a href="#" role="button" aria-label="Sign Up" class="btn btn-signup">Sign Up</a>
+            <a href="#" role="button"  class="menu-btn" aria-label="Login Page">Login</a>
+            <a href="#" role="button"  class="btn btn-signup" aria-label="Sign Up from here">Sign Up</a>
           </div>
         </div>
       </nav>
+
       <div class="header__wrapper wrapper">
         <h1 class="header__title">A modern publishing platform</h1>
         <p class="header__description">
           Grow your audience and build your online brand
         </p>
 
-        <a href="#" class="btn btn-start">Start for Free</button>
-        <a href="#" class="btn btn-learn-more">
+        <a href="#" class="btn btn-start" aria-label="Start for Free of Charge">Start for Free</button>
+        <a href="#" class="btn btn-learn-more" aria-label="Learn More">
           Learn More</a>
       </div>
     </header>
@@ -196,7 +203,7 @@
       <h1 class="section-title">Designed for the future</h1>
         <img
         src="images/illustration-editor-mobile.svg"
-        alt=""
+        alt="Editor Illustration"
         class="main__img-editor"
       />
     
@@ -225,7 +232,7 @@
         
         <img
           src="images/illustration-phones.svg"
-          alt=""
+          alt="Mobile Phone Image"
           class="main__special-img"
         />
         <h2 class="main__special-title">State of the Art Infrastructure</h2>
@@ -241,7 +248,7 @@
                   <source media="(max-width: 56.2em)" srcset="images/illustration-laptop-mobile.svg">
       <img
         src="images/illustration-laptop-mobile.svg"
-        alt=""
+        alt="Laptop Illustration"
         class="main__design--img-laptop"
       />
       </picture>
