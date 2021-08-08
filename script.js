@@ -3,6 +3,7 @@
 const menuLinks = document.querySelectorAll(".menu-btn");
 const arrows = document.querySelectorAll(".nav-bar__arrow");
 const dropdownModals = document.querySelectorAll(".dropdown");
+const mobileMenu = document.querySelector(".nav-bar__menu");
 
 const mediaQuery = window.matchMedia("(min-width: 56.3em)");
 
@@ -12,6 +13,7 @@ function modalClose(e) {
       menuLinks[idx].setAttribute("aria-expanded", "false");
       dropdownModals[idx].setAttribute("aria-hidden", "true");
       arrows[idx].classList.remove("rotate-arrow");
+      mobileMenu.setAttribute("aria-hidden", "false");
     }
   });
 }
@@ -68,7 +70,6 @@ menuLinks.forEach((menulink, idx) => {
 
 // Mobile hamburger menu
 const hamburger = document.querySelector(".nav-bar__hamburger-button");
-const mobileMenu = document.querySelector(".nav-bar__menu");
 
 hamburger.addEventListener("click", () => {
   const modalOpen = mobileMenu.getAttribute("aria-hidden") == "false";
